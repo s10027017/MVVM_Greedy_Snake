@@ -62,13 +62,13 @@ class MainViewModel : ViewModel() {
             }
 
             // TODO 影片後面故意不給看 也可以用Timer().schedule(object : TimerTask() 這種方式做
-            fixedRateTimer("timer",true,1,500){
+            fixedRateTimer("timer",true,1,200){
                 val pos = body.first().copy().apply {
                     // 按下上下左右鍵做動作
                     when (direction){
                         Direction.LEFT -> x--
                         Direction.RIGHT -> x++
-                        Direction.TOP -> y--
+                        Direction.UP -> y--
                         Direction.DOWN -> y++
                     }
                     Log.e("x",x.toString() )

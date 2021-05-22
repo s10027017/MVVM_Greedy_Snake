@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">MVVM Greedy Snake</string>
+    <string name="control_replay">REPLAY</string>
+    <string name="control_up">UP</string>
+    <string name="control_down">DOWN</string>
+    <string name="control_left">LEFT</string>
+    <string name="control_right">RIGHT</string>
+    <string name="score">SCORE:</string>
+    <string name="game_state">Game State</string>
+    <string name="game_over">Game OVER</string>
+    <string name="cancel">CANCEL</string>
+    <string name="total_score">Total Score:</string>
 </resources>
