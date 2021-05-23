@@ -34,7 +34,6 @@ import tw.tim.mvvm_greedy_snake.ui.viewmodel.MainViewModel
 class MainActivity : AppCompatActivity() {
 
     private lateinit var viewModel: MainViewModel
-    private var totalScore = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -103,7 +102,6 @@ class MainActivity : AppCompatActivity() {
         // 更新遊戲分數
         viewModel.scoreData.observe(this, {
             score.text = it.toString()
-            totalScore = it
             Log.e("it.toString()", it.toString())
         })
 
@@ -133,7 +131,7 @@ class MainActivity : AppCompatActivity() {
                 alertDialog.setView(v)
 
                 // 一定要透過View 抓取AlertDialog上的元件 才能執行動作
-                v.score.text = getString(R.string.total_score) + totalScore.toString()
+                v.score.text = getString(R.string.total_score) + viewModel.total_score
                 v.dialog_replay.setOnClickListener {
                     viewModel.start()
                     alertDialog.dismiss()
